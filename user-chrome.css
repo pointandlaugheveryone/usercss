@@ -1011,12 +1011,6 @@ treechildren::-moz-tree-image(title, open) {
     list-style-image: var(--md-folder-icon) !important
 }
 
-@media(-moz-platform: windows) {
-    menuitem[checked=true]>.menu-iconic-left {
-        list-style-image: var(--md-check-icon) !important
-    }
-}
-
 .checkbox-check[checked] {
     background-image: var(--md-check-icon) !important
 }
@@ -1108,12 +1102,6 @@ treechildren::-moz-tree-image(title, open) {
     fill: var(--md-icon-color-secondary) !important
 }
 
-@media(-moz-platform: windows) {
-    .menu-right {
-        margin-inline-end: 0px !important
-    }
-}
-
 #fxa-avatar-image {
     transform: scale(1.25) !important;
     border-radius: 50% !important
@@ -1137,11 +1125,6 @@ treechildren::-moz-tree-image(title, open) {
     }
 }
 
-@media(-moz-platform: macos) {
-    #alltabs-button {
-        list-style-image: var(--md-keyboard-arrow-down-icon) !important
-    }
-}
 
 #fullscreen-button,
 #appMenu-fullscreen-button2 {
@@ -1355,7 +1338,7 @@ body {
 
 html,
 body {
-    --tab-min-height: 30px !important;
+    --tab-min-height: 34px !important;
     --tab-opacity: 0
 }
 
@@ -1409,8 +1392,8 @@ body {
 }
 
 .tabbrowser-tab[pinned] {
-    max-width: 30px !important;
-    min-width: 30px !important;
+    max-width: 40px !important;
+    min-width: 40px !important;
     padding: 0 !important
 }
 
@@ -1558,7 +1541,7 @@ body {
 }
 
 .tab-content {
-    padding: 0 12px !important
+    padding: 0 16px !important
 }
 
 #tabbrowser-arrowscrollbox .tabbrowser-tab:is(:first-child) {
@@ -1582,9 +1565,6 @@ body {
 }
 
 #TabsToolbar {
-    min-height: 34px !important;
-    /* Match the toolbar height */
-    max-height: 34px !important;
     --lwt-tab-line-color: transparent !important
 }
 
@@ -1610,15 +1590,6 @@ body {
     z-index: 3 !important
 }
 
-@media(-moz-platform: macos) {
-    #TabsToolbar-customization-target>:not(#alltabs-button) {
-        margin-top: 8px !important
-    }
-
-    .tabbrowser-tab {
-        font-size: 14px !important
-    }
-}
 
 .tab-content {
     position: relative !important;
@@ -1962,9 +1933,9 @@ body {
 #tabs-newtab-button,
 #new-tab-button,
 #alltabs-button {
-    min-width: 30px !important;
+    min-width: 40px !important;
     min-height: var(--tab-min-height) !important;
-    max-width: 30px !important;
+    max-width: 40px !important;
     max-height: var(--tab-min-height) !important;
     margin: 0 !important;
     margin-top: auto !important
@@ -1998,50 +1969,10 @@ body {
 .tab-close-button:hover,
 .messageCloseButton>.toolbarbutton-icon:hover {
     background: var(--md-control-background-color) !important;
-    outline: 1px solid rgba(0, 0, 0, 0) !important;
+    outline: 2px solid rgba(0, 0, 0, 0) !important;
     outline-color: var(--md-control-border-color) !important
 }
 
-@media(-moz-platform: windows) {
-    .titlebar-spacer[type=post-tabs] {
-        display: none !important
-    }
-
-    #alltabs-button {
-        max-height: 100% !important;
-        min-height: 100% !important;
-        padding: 0 !important;
-        --margin-left: 48px;
-        margin: 0 0 0 var(--margin-left) !important
-    }
-
-    #alltabs-button>stack {
-        padding: 0 !important;
-        margin: 0 !important;
-        border-radius: 0 !important;
-        max-height: 100% !important;
-        min-height: 100% !important
-    }
-
-    #tabbrowser-tab {
-        order: 990 !important
-    }
-
-    #alltabs-button {
-        order: 999 !important
-    }
-}
-
-@media(-moz-platform: macos) {
-    #new-tab-button {
-        margin-inline-start: 2px !important
-    }
-
-    #tabs-newtab-button,
-    #new-tab-button {
-        margin-inline-end: 40px !important
-    }
-}
 
 .tabbrowser-tab:not([pinned]) .tab-close-button {
     display: flex !important
@@ -2192,16 +2123,6 @@ body {
 
 :root[tabsintitlebar] #titlebar:-moz-window-inactive {
     opacity: 1 !important
-}
-
-@media(-moz-platform: windows) {
-    :root:-moz-window-inactive #navigator-toolbox .titlebar-buttonbox .titlebar-button {
-        opacity: .5 !important
-    }
-
-    :root:-moz-window-inactive #navigator-toolbox .titlebar-buttonbox .titlebar-button:hover {
-        opacity: 1 !important
-    }
 }
 
 .titlebar-spacer:is([type=pre-tabs], [type=post-tabs]) {
@@ -2698,18 +2619,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
     padding-right: 16px !important
 }
 
-@media(-moz-platform: windows) {
-    .bookmark-item label {
-        font-weight: 500 !important
-    }
-}
-
-@media(-moz-platform: macos) {
-    .bookmark-item label {
-        font-size: 1.05rem !important
-    }
-}
-
 @media not (-moz-pref("userChrome.theme-default")) {
     .bookmark-item {
         fill: var(--md-text-secondary) !important
@@ -2827,62 +2736,6 @@ toolbarbutton.bookmark-item:not(.subviewbutton) {
 @media(-moz-platform: windows)and (-moz-windows-mica-popups) {
     menupopup {
         appearance: none !important
-    }
-}
-
-@media(-moz-platform: windows) {
-
-    :root,
-    html,
-    body {
-        --md-menuitem-padding-with-icon: 1em;
-        --md-menuitem-padding-without-icon: calc(1em + 16px + 8px)
-    }
-
-    #contentAreaContextMenu :is(menuitem, menu):not([image], .menu-iconic, .menuitem-iconic, [type=checkbox]) {
-        padding-inline-start: var(--md-menuitem-padding-without-icon) !important
-    }
-
-    #contentAreaContextMenu :is(menuitem, menu):is([image], .menu-iconic, .menuitem-iconic) {
-        padding-inline-start: var(--md-menuitem-padding-with-icon) !important
-    }
-
-    #contentAreaContextMenu menuitem[checked=true] {
-        padding-inline-start: var(--md-menuitem-padding-with-icon) !important
-    }
-
-    #contentAreaContextMenu menuitem[type=checkbox]>.menu-iconic-left {
-        margin-inline-end: 0 !important
-    }
-
-    #contentAreaContextMenu menuitem[type=checkbox]:is([checked=true])>.menu-iconic-left {
-        margin-inline-end: 8px !important
-    }
-
-    #contentAreaContextMenu menuitem[checked=true]>.menu-iconic-left .menu-iconic>.menu-iconic-left,
-    #contentAreaContextMenu .menuitem-iconic>.menu-iconic-left {
-        margin-inline-end: 8px !important
-    }
-
-    #tabContextMenu :is(menuitem, menu):not([image], .menu-iconic, .menuitem-iconic) {
-        padding-inline-start: var(--md-menuitem-padding-without-icon) !important
-    }
-
-    #context-navigation:not([hidden]) .menuitem-iconic {
-        position: relative !important
-    }
-
-    #context-navigation:not([hidden]) .menuitem-iconic::after {
-        padding-inline-start: var(--md-menuitem-padding-without-icon) !important
-    }
-
-    [dir=rtl] #context-navigation:not([hidden]) .menuitem-iconic::after {
-        padding-inline-start: unset !important;
-        padding-inline-end: var(--md-menuitem-padding-with-icon) !important
-    }
-
-    .menu-right {
-        margin-inline-end: 12px !important
     }
 }
 
@@ -3407,14 +3260,6 @@ toolbarbutton menupopup[placespopup] menuseparator::before {
     border-color: var(--md-menu-border-color) !important
 }
 
-@media(-moz-platform: windows) {
-
-    menupopup,
-    panel:not(#autoscroller) {
-        --panel-shadow-margin: 12px !important
-    }
-}
-
 menupopup,
 panel:not(#autoscroller) {
     --panel-shadow: var(--md-elevation-2) !important
@@ -3428,14 +3273,6 @@ dialog .titleIcon,
 @media(prefers-color-scheme: dark) {
     *[part=content] {
         border-width: 2px !important
-    }
-}
-
-@media(-moz-platform: windows) {
-
-    menupopup menuitem:not(.menuitem-iconic, [checked=true]),
-    menupopup menu:not(.menu-iconic) {
-        padding-inline-start: 36px !important
     }
 }
 
@@ -3765,17 +3602,6 @@ findbar description.findbar-label {
 @media only screen and (max-width: 550px) {
     .findbar-container checkbox {
         display: none !important
-    }
-}
-
-@media(-moz-platform: macos) {
-    .titlebar-buttonbox-container {
-        margin-inline-start: 0px !important;
-        margin-inline-end: 5px !important
-    }
-
-    .titlebar—buttonbox:-moz-locale-dir(ltr) {
-        margin-right: 5px !important
     }
 }
 

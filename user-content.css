@@ -156,7 +156,7 @@
         --md-content-separator-color: #606164;
         --md-selection-text-color: var(--md-white);
         --md-selection-background-color: var(--md-blue-900);
-        --md-search-input-shadow: 0 2px 6px 0 rgba(32, 33, 36, 0.3176470588);
+        --md-search-input-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0);
         --md-tile-background-color: #444746
     }
 
@@ -263,7 +263,7 @@
             --md-urlbar-background-color-open: var(--md-background-color-100);
             --md-selection-text-color: var(--md-black);
             --md-selection-background-color: var(--md-blue-200);
-            --md-search-input-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.2784313725);
+            --md-search-input-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0);
             --md-tile-background-color: #e1e3e1
         }
     }
@@ -781,9 +781,9 @@
 
         .search-wrapper.fake-focus:not(.search.disabled) .search-handoff-button {
             border-color: rgba(0, 0, 0, 0) !important;
-            outline: 2px solid rgba(0, 0, 0, 0) !important;
-            outline-color: var(--md-accent-color) !important;
-            outline-offset: -2px !important
+            outline: 0px solid rgba(0, 0, 0, 0) !important;
+            outline-color: rgba(0, 0, 0, 0) !important;
+            outline-offset: 0px !important
         }
 
         .search-handoff-button .fake-caret {
@@ -916,7 +916,8 @@
         }
 
         .top-site-outer .context-menu-button {
-            fill: var(--md-icon-color-primary) !important
+            fill: var(--md-icon-color-primary) !important;
+            margin: 2px !important;
         }
 
         .top-site-outer .edit-button {
@@ -1076,7 +1077,7 @@
         body.light .dropdown .dropdown-popup,
         body.sepia .toolbar,
         body.sepia .dropdown .dropdown-popup {
-            box-shadow: var(--md-elevation-2) !important
+            box-shadow: 0px !important
         }
 
         body.dark .domain,
