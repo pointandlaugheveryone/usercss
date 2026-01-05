@@ -1355,7 +1355,7 @@ body {
 
 html,
 body {
-    --tab-min-height: 34px !important;
+    --tab-min-height: 30px !important;
     --tab-opacity: 0
 }
 
@@ -1369,7 +1369,7 @@ body {
     box-sizing: border-box !important;
     background: 0 0 !important;
     padding: 0 !important;
-    font-size: 12px !important
+    font-size: 14px !important
 }
 
 .tabbrowser-tab:not([pinned]) {
@@ -1409,8 +1409,8 @@ body {
 }
 
 .tabbrowser-tab[pinned] {
-    max-width: 40px !important;
-    min-width: 40px !important;
+    max-width: 30px !important;
+    min-width: 30px !important;
     padding: 0 !important
 }
 
@@ -1582,6 +1582,9 @@ body {
 }
 
 #TabsToolbar {
+    min-height: 34px !important;
+    /* Match the toolbar height */
+    max-height: 34px !important;
     --lwt-tab-line-color: transparent !important
 }
 
@@ -1613,7 +1616,7 @@ body {
     }
 
     .tabbrowser-tab {
-        font-size: 13px !important
+        font-size: 14px !important
     }
 }
 
@@ -1959,9 +1962,9 @@ body {
 #tabs-newtab-button,
 #new-tab-button,
 #alltabs-button {
-    min-width: 40px !important;
+    min-width: 30px !important;
     min-height: var(--tab-min-height) !important;
-    max-width: 40px !important;
+    max-width: 30px !important;
     max-height: var(--tab-min-height) !important;
     margin: 0 !important;
     margin-top: auto !important

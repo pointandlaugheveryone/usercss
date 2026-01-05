@@ -1086,7 +1086,7 @@
         }
 
         body.serif .container * {
-            font-family: Georgia, "Times New Roman", serif !important
+            font-family: "ProductSans", serif !important
         }
     }
 
@@ -1118,7 +1118,7 @@
 
     h1 {
         color: var(--md-accent-color) !important;
-        font-family: "Georgia", "Times New Roman", "Times", serif !important;
+        font-family: "ProductSans", serif !important;
         font-weight: 400 !important;
         font-size: 1.5rem;
         letter-spacing: .25px
